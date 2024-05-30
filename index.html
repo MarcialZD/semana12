@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">        
+    <meta name="description" content="">
+    <title>VUE JS UCH</title>
+    <link rel="stylesheet" href="app/css/css.css">
+
+</head>
+<body>
+    <div id="app">
+       <h1>{{ titulo }}</h1>
+       <div v-if="see">
+            Esto solo se ve, cuando "see" es verdadero
+       </div>
+       <div>
+          <ul>
+            <li v-for="discoteca in discotecas" :key="discoteca.nombre">
+              <h2>{{ discoteca.nombre }}</h2>
+              <img :src="discoteca.imagen" alt="Imagen de {{ discoteca.nombre }}">
+              <p class="discoteca-description">{{ discoteca.descripcion }}</p>
+              <p class="discoteca-location"><strong>Ubicación:</strong> {{ discoteca.ubicacion }}</p>
+            </li>
+          </ul>
+       </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app/css/app.js"></script>
+</body>
+</html>
