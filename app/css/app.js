@@ -98,7 +98,7 @@ var app = new Vue({
             var cantidadCursos = 0;
             this.cursos.forEach(curso => {
                 if (curso.nota !== '' && !isNaN(curso.nota)) {
-                    sumaNotas += parseFloat(curso.nota);
+                    sumaNotas += Number(curso.nota);
                     cantidadCursos++;
                 }
             });
